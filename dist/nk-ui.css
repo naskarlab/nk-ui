@@ -1,0 +1,266 @@
+body {
+	margin: 0;
+	background-color: #eee;
+}
+
+html, body, .nk-app {
+	font-size: 13px;
+	font-family: 'Open Sans',Arial,sans-serif;
+	font-weight: 600;
+	color: #666;
+	line-height: 1.3;
+}
+
+.nk-app a {
+	color: #555;
+}
+
+/* vertical */
+
+.nk-v {
+	display: grid;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.nk-v > * {
+	float: left;
+	clear: both;
+	margin-bottom: 10px;
+}
+
+.nk-v > *:first-child {
+    margin-top: 0px;
+}
+
+.nk-v > *:last-child {
+    margin-bottom: 0px;
+}
+
+/* horizontal */
+.nk-h {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.nk-h > * {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.nk-h > *:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/* center */
+.nk-c {
+	margin: 0px auto; 
+	display: table;
+}
+
+/* container */
+.nk-t {
+	box-sizing: border-box;
+	display: flex;
+	width: 100%;
+}
+
+.nk-w {
+	padding: 0px 10px;
+}
+
+/* right */
+.nk-r {
+	box-sizing: border-box;
+	text-align: right;
+	width: 100%;
+}
+
+/* left */
+.nk-l {
+	box-sizing: border-box;
+	text-align: left;
+	width: 100%;
+}
+
+/* input */
+.nk-input label:not(.nk-no-resp) {
+    color: #626262;
+	clear: both;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.nk-input input {
+	border: 1px solid #efefef;
+    padding: 10px 10px;
+    color: #000000;
+	border-radius: 4px;
+	background-color: #fafafa;
+}
+
+.nk-input input:invalid {
+    box-shadow: none;
+}
+
+.nk-input input[disabled]:not([type]), .nk-input input[type="password"]  {
+    color: #555;
+}
+
+.nk-input input[disabled]:not([type]) {
+    background-color: #f5f5f5;
+}
+
+.nk-input input:focus { 
+	border: 1px solid #3b7aa8;
+}
+
+.nk-input input[required]:not([type]) {
+	color: red;
+}
+
+.nk-input span {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+
+
+/* button */
+.nk-btn {
+	border: none;
+	padding: 10px 15px;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-transition:0.3s all ease;
+  	transition:0.3s ease all;
+  	display: inline-block;
+	font-weight: 600;
+	line-height: 1.3;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+.nk-btn[data-nk-btn=normal] {
+	border: 1px solid #efefef;
+	background-color: #fafafa;
+	color: #555;
+}
+
+.nk-btn[data-nk-btn=primary] { 
+    border: 1px solid #4C9ED9;
+    background-color: #4C9ED9;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.nk-btn[data-nk-btn=link] {
+	color: #3b7aa8;
+}
+
+.nk-btn[data-nk-btn=primary]:hover, .nk-btn[data-nk-btn=primary]:focus {
+	background-color: #3b7aa8;
+}
+
+.nk-btn[data-nk-btn=normal]:hover, 
+.nk-btn[data-nk-btn=normal]:focus {
+	background-color: rgba(128, 128, 128, 0.1);
+	color: #000000;
+}
+
+.nk-btn[data-nk-btn=link]:hover, 
+.nk-btn[data-nk-btn=link]:focus {
+	background-color: rgba(128, 128, 128, 0.1);
+}
+
+.nk-field .nk-btn {
+    margin-top: 33px;
+}
+
+/* heading */
+.nk-heading-title {
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding: 10px 0px;
+	margin: 0px 0px 5px;
+	font-size: 20px;
+	color: #999;
+	text-transform: uppercase;
+	font-size: 14px;
+	width: 100%;
+}
+
+.nk-heading-subtitle {
+	color: #999;
+	font-size: 90%;
+	margin: 0;
+	width: 100%;
+}
+
+.nk-heading-section {
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding: 10px 0px;
+	margin: 10px 0px 10px 0px;
+	font-size: 130%;
+	color: #888;
+	width: 100%;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+/* table */
+.nk-table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.nk-table thead {
+	border-bottom: 1px solid #ddd;
+	font-size: 90%;
+	color: #999;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.nk-table th {
+    padding: 8px 10px;
+}
+
+.nk-table td {
+    padding: 8px 10px;
+    font-size: 110%;
+}
+
+.nk-icon {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px 8px;
+    min-width: 45px;
+}
+
+.nk-table img {
+	max-width: 160px;
+}
+
+
+/* segment */
+
+.nk-s {
+	padding: 8px 15px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+/* sticky */
+.nk-st {
+	position: sticky;
+	top: 0px;
+}
+

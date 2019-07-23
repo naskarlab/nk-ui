@@ -1,0 +1,14 @@
+{
+  "candies": [
+    {
+      "name": "jsweet-core",
+      "version": "6.0.2-SNAPSHOT",
+      "lastUpdateTimestamp": 1561300062000,
+      "modelVersion": "unknown",
+      "transpilerVersion": "${jsweet.transpiler.version}",
+      "jsOutputDirPath": "E:\\rp\\wsjteste\\nk-ui\\.jsweet\\candies\\js",
+      "jsDirPath": "META-INF/resources/webjars/jsweet-core/6.0.2-SNAPSHOT",
+      "jsFilesPaths": []
+    }
+  ]
+}
