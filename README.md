@@ -14,12 +14,16 @@ The basic concept is create components using directly DOM API on client-side, bu
 - Uses the same model on client and server
 - Compile checking between client and server
 
-## Sample: [nk-ui-sample](https://github.com/naskarlab/nk-ui-sample)
+## Main classes
 
 	- UIX: Central factory to create components
 	- ViewManager: manages the Views and browser history 
 	- BusClient: create the call to server using JSON requests
 	- BusServer: receives the request and execute the mapping services
+
+## Sample: [nk-ui-sample](https://github.com/naskarlab/nk-ui-sample)
+
+![UI](/docs/nk-ui-sample_login.png)
 
 File index.html:
 
