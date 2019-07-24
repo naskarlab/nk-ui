@@ -1,6 +1,6 @@
 # Naskar UI
 
-Create user interfaces handling the HTML on Client-Side. 
+Create user interfaces handling the HTML on Client-Side just with Java.
 
 ## Transpilers
 
