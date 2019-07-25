@@ -20,6 +20,26 @@ The basic concept is create components using directly DOM API on client-side, bu
 	- ViewManager: manages the Views and browser history 
 	- BusClient: create the call to server using JSON requests
 	- BusServer: receives the request and execute the mapping services
+	
+## Maven
+
+```
+<dependency>
+	<groupId>com.naskar</groupId>
+	<artifactId>nk-ui</artifactId>
+	<version>0.0.1</version>
+</dependency>
+
+<repository>
+   <snapshots>
+	   <enabled>false</enabled>
+   </snapshots>
+   <id>bintray-rafaeluchoanaskar-naskarlab</id>
+   <name>bintray</name>
+   <url>https://dl.bintray.com/rafaeluchoanaskar/naskarlab</url>
+</repository>
+```
+	
 
 ## Sample: [nk-ui-sample](https://github.com/naskarlab/nk-ui-sample)
 
