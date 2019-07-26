@@ -120,18 +120,6 @@ var nk;
                 im.BusClient = BusClient;
                 BusClient["__class"] = "nk.ft.http.im.BusClient";
                 BusClient["__interfaces"] = ["nk.ft.http.im.Factory"];
-                (function (BusClient) {
-                    var Holder = /** @class */ (function () {
-                        function Holder(__parent) {
-                            this.__parent = __parent;
-                            if (this.value === undefined)
-                                this.value = null;
-                        }
-                        return Holder;
-                    }());
-                    BusClient.Holder = Holder;
-                    Holder["__class"] = "nk.ft.http.im.BusClient.Holder";
-                })(BusClient = im.BusClient || (im.BusClient = {}));
             })(im = http.im || (http.im = {}));
         })(http = ft.http || (ft.http = {}));
     })(ft = nk.ft || (nk.ft = {}));
@@ -662,7 +650,6 @@ var nk;
                         this.applyChanges();
                     }
                     /*private*/ UIImpl.prototype.applyChanges = function () {
-                        var _this = this;
                         while ((this.changes.length > 0)) {
                             {
                                 this.changes.shift().call();
@@ -675,6 +662,9 @@ var nk;
                             }
                         }
                         ;
+                    };
+                    /*private*/ UIImpl.prototype.scheduleApply = function () {
+                        var _this = this;
                         window.requestAnimationFrame(function (time) {
                             _this.applyChanges();
                         });
@@ -690,6 +680,7 @@ var nk;
                         else {
                             a.call();
                         }
+                        this.scheduleApply();
                     };
                     /**
                      *
@@ -702,6 +693,7 @@ var nk;
                         else {
                             a.call();
                         }
+                        this.scheduleApply();
                     };
                     /**
                      *

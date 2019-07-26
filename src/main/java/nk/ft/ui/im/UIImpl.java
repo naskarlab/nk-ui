@@ -37,6 +37,9 @@ public class UIImpl implements UI, Updater {
 		while(this.afterChanges.length > 0) {
 			this.afterChanges.shift().call();
 		}
+	}
+
+	private void scheduleApply() {
 		window.requestAnimationFrame((time) -> {
 			applyChanges();
 		});
@@ -49,6 +52,7 @@ public class UIImpl implements UI, Updater {
 		} else {
 			a.call();
 		}
+		scheduleApply();
 	}
 	
 	@Override
@@ -58,6 +62,7 @@ public class UIImpl implements UI, Updater {
 		} else {
 			a.call();
 		}
+		scheduleApply();
 	}
 	
 	@Override

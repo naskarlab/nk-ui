@@ -62,10 +62,6 @@ public class BusClient<T> implements Factory {
 		return (Promise<R>)call.apply((T)(Object)proxy);
 	}
 	
-	class Holder {
-		Object value;
-	}
-	
 	@Override
 	public Object create(String clazzName) throws Exception {
 		Supplier<?> getter = this.factories.$get(clazzName);

@@ -24,13 +24,6 @@ declare namespace nk.ft.http.im {
         create(clazzName: string): any;
         addFactory<M>(clazz: any, getter: () => M): void;
     }
-    namespace BusClient {
-        class Holder {
-            __parent: any;
-            value: any;
-            constructor(__parent: any);
-        }
-    }
 }
 declare namespace nk.ft.http.im {
     class ClientPromiseImpl<T> implements nk.ft.http.im.Promise<T> {
@@ -297,6 +290,7 @@ declare namespace nk.ft.ui.im {
         debug: boolean;
         constructor(document: Document);
         applyChanges(): void;
+        scheduleApply(): void;
         /**
          *
          * @param {*} a
